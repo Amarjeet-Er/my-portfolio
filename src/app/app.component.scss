@@ -1,0 +1,189 @@
+/* Advanced Portfolio SCSS (Dark Theme with AOS, Mobile Responsive) */
+
+:host {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.app-wrapper {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+section {
+  padding: 4rem 1rem;
+  border-bottom: 1px solid #333;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0ff;
+  }
+
+  p,
+  a {
+    color: #ccc;
+    font-size: 1rem;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: linear-gradient(to bottom, #000, #111);
+
+  .highlight {
+    color: #0ff;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+
+  .intro {
+    color: #aaa;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .resume-btn {
+    display: inline-block;
+    background-color: #0ff;
+    color: #000;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #00cccc;
+    }
+  }
+}
+
+.typed-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+
+  .cursor {
+    color: #0ff;
+    border-right: 2px solid #0ff;
+    padding-right: 4px;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+}
+
+@keyframes blink-caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #0ff;
+  }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+
+  h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    li {
+      background: #111;
+      padding: 0.5rem 1rem;
+      border: 1px solid #333;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      color: #0ff;
+    }
+  }
+}
+
+.project-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  h3 {
+    color: #fff;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+  }
+
+  p {
+    color: #aaa;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+    li {
+      color: #ccc;
+      list-style: disc;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+  }
+}
+
+.contact {
+  p,
+  a {
+    font-size: 1rem;
+    color: #ccc;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .typed-text {
+    font-size: 1.4rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .resume-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
